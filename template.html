@@ -1,0 +1,3294 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>NGS TDS Content Specification, Version 4.0, 7 July 2011</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 6 6 2 2 2 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Palatino;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:65.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-13.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-link:"Endnote Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:.25in;
+	text-align:justify;
+	text-indent:-.25in;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListBullet5, li.MsoListBullet5, div.MsoListBullet5
+	{margin-top:10.0pt;
+	margin-right:-.25in;
+	margin-bottom:0in;
+	margin-left:1.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoListNumber2, li.MsoListNumber2, div.MsoListNumber2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:40.0pt;
+	text-align:justify;
+	text-indent:-20.0pt;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListNumber3, li.MsoListNumber3, div.MsoListNumber3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:60.0pt;
+	text-align:justify;
+	text-indent:-20.0pt;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListNumber4, li.MsoListNumber4, div.MsoListNumber4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:80.0pt;
+	text-align:justify;
+	text-indent:-20.0pt;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Body Text Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoNoteHeading, li.MsoNoteHeading, div.MsoNoteHeading
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:200%;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0in;
+	margin-right:1.0in;
+	margin-bottom:6.0pt;
+	margin-left:1.0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-link:"Plain Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoAutoSig, li.MsoAutoSig, div.MsoAutoSig
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	color:#365F91;
+	font-weight:bold;}
+p.a1, li.a1, div.a1
+	{mso-style-name:a1;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;
+	layout-grid-mode:line;}
+span.BodyTextChar
+	{mso-style-name:"Body Text Char";
+	mso-style-link:"Body Text";
+	font-family:"Arial",sans-serif;}
+p.a2, li.a2, div.a2
+	{mso-style-name:a2;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+p.a3, li.a3, div.a3
+	{mso-style-name:a3;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Definition, li.Definition, div.Definition
+	{mso-style-name:Definition;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.DefinitionCxSpFirst, li.DefinitionCxSpFirst, div.DefinitionCxSpFirst
+	{mso-style-name:DefinitionCxSpFirst;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.DefinitionCxSpMiddle, li.DefinitionCxSpMiddle, div.DefinitionCxSpMiddle
+	{mso-style-name:DefinitionCxSpMiddle;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.DefinitionCxSpLast, li.DefinitionCxSpLast, div.DefinitionCxSpLast
+	{mso-style-name:DefinitionCxSpLast;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Term, li.Term, div.Term
+	{mso-style-name:Term;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Note, li.Note, div.Note
+	{mso-style-name:Note;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.3in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
+	{mso-style-name:NoteCxSpFirst;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
+	{mso-style-name:NoteCxSpMiddle;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
+	{mso-style-name:NoteCxSpLast;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.3in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.EncodingElementInstance, li.EncodingElementInstance, div.EncodingElementInstance
+	{mso-style-name:"Encoding Element Instance";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:14.2pt;
+	margin-bottom:.0001pt;
+	text-indent:-14.2pt;
+	font-size:8.0pt;
+	font-family:"Arial Narrow",sans-serif;}
+span.FieldReference
+	{mso-style-name:"Field Reference";
+	font-weight:bold;
+	font-style:italic;}
+span.Char
+	{mso-style-name:Char;
+	font-family:"Arial",sans-serif;}
+span.StyleBold
+	{mso-style-name:"Style Bold";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.StyleNote10pt, li.StyleNote10pt, div.StyleNote10pt
+	{mso-style-name:"Style Note + 10 pt";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.3in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.StyleNote10ptCxSpFirst, li.StyleNote10ptCxSpFirst, div.StyleNote10ptCxSpFirst
+	{mso-style-name:"Style Note + 10 ptCxSpFirst";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.StyleNote10ptCxSpMiddle, li.StyleNote10ptCxSpMiddle, div.StyleNote10ptCxSpMiddle
+	{mso-style-name:"Style Note + 10 ptCxSpMiddle";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.StyleNote10ptCxSpLast, li.StyleNote10ptCxSpLast, div.StyleNote10ptCxSpLast
+	{mso-style-name:"Style Note + 10 ptCxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.3in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+span.StyleBold1
+	{mso-style-name:"Style Bold1";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.ANNEX, li.ANNEX, div.ANNEX
+	{mso-style-name:ANNEX;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:38.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-indent:0in;
+	line-height:15.5pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Tabletext8, li.Tabletext8, div.Tabletext8
+	{mso-style-name:"Table text \(8\)";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:9.5pt;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.StyleBodyTextRight3, li.StyleBodyTextRight3, div.StyleBodyTextRight3
+	{mso-style-name:"Style Body Text + Right\:  3\0022";
+	margin-top:0in;
+	margin-right:3.0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.a4, li.a4, div.a4
+	{mso-style-name:a4;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.a5, li.a5, div.a5
+	{mso-style-name:a5;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:11.5pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.a6, li.a6, div.a6
+	{mso-style-name:a6;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:11.5pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Figuretitle, li.Figuretitle, div.Figuretitle
+	{mso-style-name:"Figure title";
+	margin-top:11.0pt;
+	margin-right:0in;
+	margin-bottom:11.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Formula, li.Formula, div.Formula
+	{mso-style-name:Formula;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:11.0pt;
+	margin-left:20.0pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.zzLn5, li.zzLn5, div.zzLn5
+	{mso-style-name:zzLn5;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.zzLn6, li.zzLn6, div.zzLn6
+	{mso-style-name:zzLn6;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:11.5pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Tabletext, li.Tabletext, div.Tabletext
+	{mso-style-name:"Table text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Helvetica",sans-serif;}
+span.EndnoteTextChar
+	{mso-style-name:"Endnote Text Char";
+	mso-style-link:"Endnote Text";
+	font-family:"Arial",sans-serif;}
+p.TableTitle, li.TableTitle, div.TableTitle
+	{mso-style-name:"Table Title";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:-5.05pt;
+	text-align:center;
+	text-indent:.7pt;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	layout-grid-mode:line;
+	font-weight:bold;}
+p.newbodytext, li.newbodytext, div.newbodytext
+	{mso-style-name:"new body text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Palatino",serif;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;
+	font-family:"Arial",sans-serif;}
+p.Title-p, li.Title-p, div.Title-p
+	{mso-style-name:"Title -p";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:20.0pt;
+	font-family:"Calibri",sans-serif;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-link:"Plain Text";
+	font-family:"Calibri",sans-serif;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:8.5in 11.0in;
+	margin:1.0in 81.0pt 1.0in 1.0in;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoBodyText align=center style='text-align:center'><a
+name="_Toc504539825"></a><a name=CurrentCursorPosition></a>&nbsp;</p>
+
+<p class=newbodytext><span style='position:relative;z-index:251657216;
+left:-10px;top:0px;width:117px;height:117px'><img width=117 height=117
+src="NGA%20STND%20Template%2020180517_files/image001.jpg" alt="NGA_Seal_small"></span><b><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<br clear=ALL>
+
+<p class=newbodytext><b><span style='font-family:"Arial",sans-serif;layout-grid-mode:
+line'>                                                                                                            </span></b><b><span
+lang=FR style='font-family:"Arial",sans-serif;layout-grid-mode:line'>NGA.aaaa.xxxx_v.v_SHORTID</span></b></p>
+
+<p class=newbodytext><b><span lang=FR style='font-family:"Arial",sans-serif;
+layout-grid-mode:line'>                                                                                                                                              yyyy-mm-dd</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-size:20.0pt;font-family:"Arial",sans-serif;layout-grid-mode:line'>NGA
+STANDARDIZATION DOCUMENT</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-size:16.0pt;font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='position:relative;z-index:251665408;left:-49px;top:16px;width:288px;
+height:200px'><img width=288 height=184
+src="NGA%20STND%20Template%2020180517_files/image002.png"
+alt="When the Standard comprises a logical data model and a content registry, use “Edition x.x”. The subsequent identification of content updates associated with the Edition must be addressed within the text of the standard."></span><b><span
+lang=FR style='font-size:16.0pt;font-family:"Arial",sans-serif;layout-grid-mode:
+line'>&nbsp;</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><b><span lang=FR
+style='font-size:16.0pt;font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<br clear=ALL>
+
+<p class=newbodytext align=center style='margin-top:3.0pt;text-align:center'><b><span
+lang=FR style='font-size:20.0pt;font-family:"Arial",sans-serif;layout-grid-mode:
+line'>Name of document</span></b></p>
+
+<p class=newbodytext align=center style='margin-top:3.0pt;text-align:center'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif;layout-grid-mode:line'>(yyyy-mm-dd)</span></b><span
+style='font-family:"Arial",sans-serif'> </span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=329 height=16></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=336 height=139
+  src="NGA%20STND%20Template%2020180517_files/image003.png"
+  alt="It is the Author’s responsibility to obtain release approval and insert the appropriate DISTRIBUTION STATEMENT."></td>
+ </tr>
+</table>
+
+<span style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=newbodytext align=center style='text-align:center'><b><span
+style='font-size:18.0pt;font-family:"Arial",sans-serif;layout-grid-mode:line'>Version
+x.x</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='position:relative;z-index:251658240;left:-18px;top:15px;width:662px;
+height:156px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=63></td>
+  <td width=280></td>
+  <td width=319></td>
+ </tr>
+ <tr>
+  <td height=29></td>
+  <td colspan=3 align=left valign=top><img width=662 height=29
+  src="NGA%20STND%20Template%2020180517_files/image004.png"
+  alt="DISTRIBUTION STATEMENT A: Approved for public release; distribution is unlimited."></td>
+ </tr>
+ <tr>
+  <td height=14></td>
+ </tr>
+ <tr>
+  <td height=98></td>
+  <td></td>
+  <td align=left valign=top><img width=280 height=98
+  src="NGA%20STND%20Template%2020180517_files/image005.png"
+  alt="Should this be removed? Use only for TAES-generated items?"></td>
+ </tr>
+</table>
+
+</span><span style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=newbodytext align=center style='text-align:center'><span
+style='font-family:"Arial",sans-serif;layout-grid-mode:line'>&nbsp;</span></p>
+
+<div style='border-top:solid windowtext 1.0pt;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:none;padding:1.0pt 0in 1.0pt 0in'>
+
+<p class=newbodytext align=center style='text-align:center;border:none;
+padding:0in'><b><span style='font-size:4.0pt;font-family:"Arial",sans-serif;
+layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<br clear=ALL>
+
+<p class=newbodytext align=center style='text-align:center;border:none;
+padding:0in'><b><span style='font-family:"Arial",sans-serif;layout-grid-mode:
+  line'>NATIONAL</span></b><b><span style='font-family:"Arial",sans-serif;
+ layout-grid-mode:line'> CENTER</span></b><b><span style='font-family:"Arial",sans-serif;
+layout-grid-mode:line'> FOR GEOSPATIAL INTELLIGENCE STANDARDS</span></b></p>
+
+<p class=newbodytext align=center style='text-align:center;border:none;
+padding:0in'><b><span style='font-size:4.0pt;font-family:"Arial",sans-serif;
+layout-grid-mode:line'>&nbsp;</span></b></p>
+
+</div>
+
+</div>
+
+<b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<div class=WordSection2>
+
+<p class=MsoTocHeading><span style='font-family:"Arial",sans-serif;color:windowtext'>Table
+of Contents</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoTocHeading style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:0in'><span style='font-family:"Arial",sans-serif;color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoTocHeading style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:0in'><span style='font-family:"Arial",sans-serif;color:windowtext'>Table
+of Figures</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoTocHeading style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:0in'><span style='font-family:"Arial",sans-serif;color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoTocHeading style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:0in'><span style='font-family:"Arial",sans-serif;color:windowtext'>Table
+of Tables</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB style='font-size:10.0pt'>&nbsp;</span></p>
+
+</div>
+
+<span lang=EN-GB style='font-size:10.0pt;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<h1 style='margin-left:0in;text-indent:0in'><span style='font-size:14.0pt'>Introduction</span></h1>
+
+<p class=MsoNormal><i>[Provide an executive overview of such topics as the
+requirement(s) being satisfied by the standard</i>] </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:10.0pt;font-family:"Arial",sans-serif'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=Title-p align=center style='text-align:center'>Revision History</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><span style='font-size:11.0pt;
+  line-height:115%'>Version</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><span style='font-size:11.0pt;
+  line-height:115%'>Approval Date</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><span style='font-size:11.0pt;
+  line-height:115%'>POC</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><span style='font-size:11.0pt;
+  line-height:115%'>Change Description</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><span style='font-size:11.0pt;
+  line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><i><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>Date of
+  authorization to publish</span></i></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><span style='font-size:11.0pt;
+  line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p style='margin-top:3.0pt'><i><span style='font-size:11.0pt;
+  line-height:115%;font-weight:normal'>[Include summary description of changes
+  incorporated in this version.]</span></i></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid;height:13.0pt'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:13.0pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.0pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.0pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.0pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=101 valign=top style='width:75.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=116 valign=top style='width:87.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=78 valign=top style='width:58.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=343 valign=top style='width:257.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Title-p align=center style='margin-top:3.0pt;text-align:center'><span
+  style='font-size:11.0pt;line-height:115%;font-weight:normal'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1><a name="_Toc301170815"><span style='font-size:14.0pt'>1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt'>Scope</span></a></h1>
+
+<p class=MsoNormal><i>[State what the document does through a series of
+statements of fact.]</i></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1><a name="_Toc301170817"><span style='font-size:14.0pt'>2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt'>Conformance</span></a></h1>
+
+<p class=MsoNormal><i><u><span style='background:#EDF5E7'>[Guidance</span></u><span
+style='background:#EDF5E7'>:  All testable NGA standardization documents
+provide an introductory conformance clause near the beginning of the document. 
+The statements in this conformance clause are expanded upon in the Conformance
+Description clause near the end of the main document body, and in the Abstract
+Test Suite (ATS) annex(s) to the document.  Paragraphs 2.1 – 2.4 provide a
+general layout template for the conformance clause].</span><br>
+<br>
+</i></p>
+
+<h2 style='margin-left:1.8pt;text-indent:-1.8pt'>2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Conformance Requirements.<br>
+<span style='font-size:10.0pt;font-weight:normal'>[Guidance:  The conformance
+clause starts with a general statement of the requirements to be satisfied in
+order for an implementation to claim conformance to the standard. The clause
+may identify conformance classes to define different kinds of conformance
+requirements. The actual requirements are stated in one or more instances of an
+Abstract Test Suite (ATS).  When conformance classes are defined, a separate
+ATS may be used for each conformance class.<br>
+<br>
+Definition of conformance classes may be useful when a standard has more than
+one anticipated use case for implementation. For example, a GEOINT data
+standard may have different test requirements for data production, data output,
+data dissemination, data exchange, data archiving, data discovery, data
+interpretation, data exploitation, data portrayal, etc.  A GEOINT services interface
+standard may have different test requirements for server and client.  For some
+GEOINT standards, the item to be evaluated for conformance may not be a system
+implementation, but some form of documentation such as an application schema,
+profile, technology-specific specification, platform-specific specification,
+etc.<br>
+<br>
+Requirements of conformance classes may overlap, in which case, subparts of the
+ATS may be shared between different conformance classes.  <br>
+<br>
+A conformance level is a special kind of conformance class in which the
+requirements of a higher level contain all the requirements of the lower
+levels.<br>
+<br>
+Exemplary statements: <br>
+<br>
+</span><span style='font-size:10.0pt;font-weight:normal;font-style:normal'>An
+item conforms to this standard when it fulfills: <br>
+     - The mandatory requirements of the standard, and<br>
+     - The conditional requirements of the standard (when the stated conditions
+apply), and <br>
+     - Those optional requirements of the standard needed to enable the purpose
+of the item.</span><span style='font-size:10.0pt;font-weight:normal'><br>
+<br>
+</span><span style='font-size:10.0pt;font-weight:normal;font-style:normal'>Any
+item claiming conformance to this standard shall pass all the requirements
+described in the abstract test suite.<br>
+<br>
+This standard defines three </span><span style='font-size:10.0pt;font-weight:
+normal'>[e.g.]</span><span style='font-size:10.0pt;font-weight:normal;
+font-style:normal'> classes of conformance: class A, class B and class C. </span><span
+style='font-size:10.0pt;font-weight:normal'>[The intended application of the
+conformance classes may be stated here.]</span><span style='font-size:10.0pt;
+font-weight:normal;font-style:normal'> Any item claiming conformance with one
+of these classes shall pass all the requirements described in the corresponding
+abstract test suite.</span><span style='font-weight:normal;font-style:normal'><br>
+<br>
+</span></h2>
+
+<h2>2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Abstract Test Suite (ATS) for conformance class A<br>
+<span style='font-size:10.0pt;font-weight:normal;font-style:normal'>The ATS for
+conformance class A is at Annex …</span><br>
+<br>
+</h2>
+
+<h2>2.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Abstract Test Suite (ATS) for conformance class B<br>
+<span style='font-size:10.0pt;font-weight:normal;font-style:normal'>The ATS for
+conformance class B is at Annex …<br>
+<br>
+</span></h2>
+
+<h2><span style='font-weight:normal;font-style:normal'>2.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Abstract
+Test Suite (ATS) for conformance class ….<br>
+<span style='font-size:10.0pt;font-weight:normal;font-style:normal'>The ATS for
+conformance class … is at Annex …</span></h2>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1><a name="_Toc301170818"><span lang=EN-GB style='font-size:14.0pt'>3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt'>References</span></a></h1>
+
+<h2><a name="_Toc301170819"></a><a name="_Ref228095498">3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Normative</span></a></h2>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;color:#C00000'>NOTE:
+references may be listed in bullet or table form.</span></b></p>
+
+<p class=MsoNormal><i><u><span style='color:black;background:#EDF5E7'>Guidance</span></u></i><span
+style='color:black;background:#EDF5E7'>: <i>This section is mandatory. It is a list
+of referenced documents cited in the text as a requirements within this
+document.</i></span></p>
+
+<p class=MsoNormal><span style='color:black;background:#EDF5E7'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='color:black;background:#EDF5E7'> <i>Include
+standards conformance-related normative references pertinent to the standard. 
+The following may have general pertinence to NGA standardization documents.</i></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>NSG Directive 3201, The Geospatial Intelligence (GEOINT)
+Functional Manager Standards Assessment (GFMSA) Program<br>
+<br>
+</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-size:
+11.0pt;font-family:Symbol;color:#C00000'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>NSG Manual 3202, GEOINT Functional
+Manager Standards Assessment Program</span></p>
+
+<h2>3.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:12.0pt'>Informative</span></h2>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;color:#C00000'>NOTE:
+references may be listed in bullet or table form.</span></b></p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;color:#C00000'>&nbsp;</span></p>
+
+<h1><a name="_Toc301170821"><span style='font-size:14.0pt'>4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt'>Terms, Definitions and Acronyms</span></a></h1>
+
+<h2><a name="_Toc301170822">4.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:12.0pt'>Terms and Definitions</span></a></h2>
+
+<p class=MsoBodyText style='text-align:justify'><a name="_Toc301170823"><b><span
+style='font-size:10.0pt;color:#C00000'>NOTE: Insert in table or bullet form</span></b></a></p>
+
+<p class=MsoNormal><i><u><span style='background:#EDF5E7'>Guidance</span></u><span
+style='background:#EDF5E7'>:  Include definitions for conformance related terms
+used in the standardization document. Use the following definitions <u>when</u>
+the terms are used within the document.</span><br>
+<br>
+</i></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Abstract Test Case.  A </span>generalized
+test for a particular requirement. [ISO 19105]<br>
+<br>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Abstract Test Method.  A </span>method
+for testing an implementation that is independent of any particular test
+procedure.  [ISO 19105]<br>
+<br>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Abstract Test Module.  A </span>set of
+related abstract test cases.  Abstract test modules may be nested in a
+hierarchical way. [ISO 19105]<br>
+<br>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Abstract Test Suite (ATS).  A set of </span>abstract
+test modules and associated abstract test cases that collectively specify all
+the requirements to be satisfied for conformance. [digest from ISO 19105]<br>
+<br>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Basic Test.  An initial capability test
+intended to identify clear cases of non-conformance. [ISO 19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Capability Test.  A test designed to
+determine whether an IUT conforms to a particular characteristic of a standard as
+described in the test purpose. [ISO 19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Compliance.  Adherence to policy,
+directives, instructions, guidance, etc.  Often used to define or mean the same
+as conformance.  E.g. an implementation exhibits conformance when it complies
+with the conformance requirements of the applicable information standards. <br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Conformance.  The fulfilment of
+specified requirements.  [ISO 19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Conformance Class.  Conformance classes
+may be used to group, define, and label different kinds of conformance
+requirements pertinent to implementation of the standard.  [digest from ISO
+19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Conformance Level.  A conformance level
+is a special kind of conformance class in which the conformance requirements of
+a higher level contain all the requirements of the lower levels.  [digest from
+ISO 19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Executable Test Suite (ETS).  A set of
+executable test cases. [ISO 19105]  <br>
+<br>
+An executable test suite (ETS) is an instantiation of an ATS, in which all
+implementation-dependent parameters are assigned specific values.  An executable
+test case is derived from an abstract test case and is in a form that allows it
+to be run on the IUT. Executable test cases result from the instantiation of
+specific values for parameters in abstract test cases.  Executable test cases
+may be unique to each IUT. [digest from ISO 19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Implementation Conformance Statement
+(ICS).  A statement made by the supplier of an implementation or system claimed
+to conform to a given standard (or set of standards/specifications), asserting
+which capabilities have been conformingly implemented. [digest from ISO 19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Implementation Under Test (IUT).  The
+realization of a specification that is the focus of test.  [digest from ISO
+19105]<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Pro forma.  Latin for the term “form”. 
+<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Reference Implementation (RI).  A conformant,
+trusted, or well-known exemplar implementation of one or more standards used to
+support standards conformance and interoperability testing.  In some instances,
+the RI is suitable for reuse by developers in their own instantiations of the
+standardized function or service.<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Standards Conformance Testing.  Testing
+performed to determine the extent to which a system or subsystem adheres to or
+implements a standard.  It involves testing the capabilities of an
+implementation against both the conformance requirements in the relevant standard(s)
+and the statement of the implementation's capabilities. [NSGM 3202]<br>
+<br>
+</span></p>
+
+<p class=MsoBodyText style='margin-left:.5in;text-align:justify;text-indent:
+-.25in'><span style='font-size:10.0pt;font-family:Symbol;color:#C00000'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>System Under Test
+(SUT).  The </span><span style='font-size:10.0pt'>computer hardware, software
+and communication network required to support an IUT.  [ISO 19105]</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b><span style='font-size:10.0pt;
+color:#C00000'>&nbsp;</span></b></p>
+
+<h2><span lang=EN-GB>4.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB style='font-size:12.0pt'>Acronyms</span></h2>
+
+<p class=MsoBodyText style='text-align:justify'><span style='font-size:10.0pt'>The
+acronyms that are used in this standard are specified in the following list.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><a name="OLE_LINK2"></a><a
+name="OLE_LINK1"><b><span style='font-size:10.0pt;color:#C00000'>NOTE: Insert
+in bullet form</span></b></a></p>
+
+<p class=MsoNormal><i><u><span style='background:#EDF5E7'>Guidance</span></u><span
+style='background:#EDF5E7'>:  Include abbreviations for conformance-related
+terms used in the standardization document. Use the following spell-out of
+abbreviations <u>when</u> the abbreviations appear within the document.</span><br>
+<br>
+</i></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.55in;text-indent:-.3in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>ATS     Abstract Test Suite<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>ETS     Executable Test Suite<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>ICS      Implementation Conformance
+Statement<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>IUT      Implementation Under Test<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>RI        Reference Implementation<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.55in;text-indent:-.3in'><span
+style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>SUT     System Under Test</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b><span style='font-size:10.0pt;
+color:#C00000'>&nbsp;</span></b></p>
+
+<h1><span lang=EN-GB style='font-size:14.0pt'>5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB style='font-size:14.0pt'>[Insert descriptive
+title of what the section is; for example, Logical Data Model or Governance
+Policy and Procedures]</span></h1>
+
+<p class=MsoNormal style='margin-left:.3in'><i>&nbsp;</i></p>
+
+<p class=MsoNormal><b><span style='color:#C00000'>NOTE: “Requirements” is not
+an appropriate section-title as either “requirements” are for the creation of
+the standard or “requirements” are in regard to conformance to the standard and
+therefore belong, respectively, in the Conformance section or the Abstract Test
+Suite.</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:11.0pt;color:#C00000'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;color:#C00000'>Add
+additional sections as required. </span><span style='color:#C00000'>The
+following section is numbered “6” only because it is automatically generated
+and will be correctly numbered in your document after previous sections.</span></b></p>
+
+<h1><span style='font-size:14.0pt'>6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt'>Conformance Description </span></h1>
+
+<p class=MsoNormal><i><u><span style='background:#EDF5E7'>Guidance</span></u><span
+style='background:#EDF5E7'>:  The conformance description clause describes what
+it means to conform to the standard.  This clause expands upon the content of
+the introductory conformance clause found near the beginning of the
+standardization document.  <br>
+<br>
+This clause defines conformance classes and/or conformance levels, and
+describes the anticipated use cases that may have been introduced in the
+introductory conformance clause.</span><br>
+<br>
+<span style='background:#EDF5E7'>It may also be used to define conformance
+relationships as they may pertain to other standardization documents.</span></i></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='color:#C00000'>NOTE: Annexes, if included,
+must state whether they are normative or informative in nature, see examples
+below. Normative Annexes precede Informative Annexes.</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='font-size:11.0pt'> </span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='font-size:14.0pt'>Annex  A – Abstract Test
+Suite (Normative)</span></b></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-bottom:8.0pt;line-height:107%'><i><u><span
+style='line-height:107%;color:black;background:#EDF5E7'>Guidance</span></u></i><span
+style='line-height:107%;color:black;background:#EDF5E7'>:  <i>Ideally the ATS
+is documented within the standard.  If an ATS is documented external to the
+standard, provide reference information in the standard about the ATS.</i><br>
+<br>
+<i>An ATS is represented as a hierarchical structure of abstract test modules
+and test cases.  Abstract test cases form the lowest level in the ATS
+hierarchy. Abstract test modules are used to classify and group (nest) abstract
+test cases and other abstract test modules. </i></span><i><span
+style='line-height:107%;background:#EDF5E7'>Each abstract test case exercises at
+least one test purpose from the standard.  Abstract test modules may be nested
+to any depth needed to provide a logical ordering of the abstract test cases.</span></i></p>
+
+<p class=MsoNormal style='margin-left:.25in'><img width=72 height=29
+src="NGA%20STND%20Template%2020180517_files/image006.png" align=left hspace=12
+vspace=5 alt="Figure 2"><i><br>
+</i><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;background:
+#EDF5E7'><img width=601 height=175 id="Diagram 4"
+src="NGA%20STND%20Template%2020180517_files/image007.png"></span><i><span
+style='color:black'><br>
+<br>
+<br>
+</span></i></p>
+
+<p class=MsoNormal><i><span style='color:black;background:#EDF5E7'>First
+identify the main test purpose as the root node of the ATS.  Decompose the main
+test purpose into test modules (child nodes).  Continue the parent/child node
+decomposition process until all test purposes are decomposed into sufficiently
+small/basic nodes, i.e. abstract test cases.<br>
+<br>
+The following template (paragraphs A.1 – A.2) illustrates the test module and
+test case structure for a notional ATS.  The test module and test case
+structure may be documented using a hierarchal paragraph numbering as
+illustrated below, in a table, in a graphical representation, or other representation
+suitable for expressing the abstract test requirements in human readable form.</span></i><span
+style='color:black'><br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:22.5pt;text-indent:-.3in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:107%;color:black'>Test Module for
+MMM</span></b></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:49.5pt;text-indent:-.35in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.2.1<span style='font:7.0pt "Times New Roman"'>
+</span></span></b><span style='line-height:107%;color:black'> <b>MMM</b></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:1.0in;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Purpose:<b> </b><br>
+<i><u><span style='background:#EDF5E7'>Guidance</span></u></i><span
+style='background:#EDF5E7'>:  <i>Provide a precise description of the test
+objective.</i></span><i><br>
+<br>
+</i></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:1.0in;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Method:<b> </b><br>
+<i><u><span style='background:#EDF5E7'>Guidance</span></u></i><span
+style='background:#EDF5E7'>:  <i>The description of a test method for an <b>abstract
+test module</b> typically contains references to other clauses. It may also
+include statements on whether it is mandatory, optional, or conditional. <br>
+<br>
+Specific test methods and test-verdict criteria are stated in <b>abstract test
+cases</b>. Provide a narrative description for what is to be measured and the
+criteria for evaluating pass or fail.<br>
+<br>
+Example:  Verify that foreign information items do not reside within the KML
+namespace; they are placed in another namespace.</i></span><br>
+<br>
+</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:1.0in;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Reference: <br>
+<i><u><span style='background:#EDF5E7'>Guidance</span></u></i><span
+style='background:#EDF5E7'>: <i>Designate the clause(s) in the main body of the
+standard where the requirements to be tested are specified.</i></span><i><br>
+<br>
+</i></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:1.0in;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Type: <br>
+<i><u><span style='background:#EDF5E7'>Guidance</span></u></i><span
+style='background:#EDF5E7'>:  </span></span><i><span style='line-height:107%;
+background:#EDF5E7'>Test type is either a <b>basic test</b> or a <b>capability
+test</b>.  <br>
+<br>
+A <b>basic test</b> is an initial capability test intended to identify clear
+cases on non-conformance. Basic tests provide limited testing of an IUT in
+order to establish whether or not it is appropriate to perform more thorough
+testing.</span></i><span style='font-size:11.0pt;line-height:107%;font-family:
+"Calibri",sans-serif;background:#EDF5E7'> </span><i><span style='line-height:
+107%;background:#EDF5E7'>Basic tests are simple capability tests.<br>
+<br>
+A <b>capability test</b> is designed to determine whether an IUT conforms to a
+particular characteristic of the standard as described in the test purpose.
+Capability tests should exercise an implementation as thoroughly as is
+practical over the full range of conformance requirements specified in the
+standard. Capability tests should be provided to check mandatory capabilities
+and those conditional and optional capabilities that are identified in the ICS
+as being supported by the IUT.</span></i><i><span style='line-height:107%'><br>
+<br>
+</span></i></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:22.5pt;text-indent:-.3in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:107%;color:black'>Test Module for
+NNN</span></b><span style='line-height:107%;color:black'> <i><span
+style='background:#EDF5E7'>(a child node of Test Module MMM)</span></i></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:49.5pt;text-indent:-.35in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.2.1<span style='font:7.0pt "Times New Roman"'>
+</span></span></b><b><span style='line-height:107%;color:black'>NNN</span></b></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Purpose:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Method:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Reference:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Type:<br>
+<br>
+</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:49.5pt;text-indent:-.35in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.2.2<span style='font:7.0pt "Times New Roman"'>
+</span></span></b><b><span style='line-height:107%;color:black'>Test Case for
+PPP</span></b><span style='line-height:107%;color:black'> <i><span
+style='background:#EDF5E7'>(a child node of Test Module NNN)</span></i></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Purpose:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Method:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Reference:</span></p>
+
+<p class=MsoNormalCxSpLast style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Type:<br>
+<br>
+</span></p>
+
+<p class=MsoListParagraph style='margin-left:.75in;text-indent:-27.0pt'><b>A.2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></b><b>Test Case for QQQ</b>
+<span style='background:#EDF5E7'>(a child node of Test Module NNN)</span></p>
+
+<p class=MsoNormalCxSpFirst style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Purpose:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Method:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Reference:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Type:<br>
+<br>
+</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:49.5pt;text-indent:-.35in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.2.4<span style='font:7.0pt "Times New Roman"'>
+</span></span></b><b><span style='line-height:107%;color:black'>Test Case for
+RRR</span></b><span style='line-height:107%;color:black'> <i><span
+style='background:#EDF5E7'>(a child node of Test Module MMM)</span></i></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Purpose:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Method:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Reference:</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:67.5pt;text-indent:-.25in;line-height:107%'><span
+style='line-height:107%;color:black'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='line-height:107%;color:black'>Test Type:<br>
+<br>
+</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:22.5pt;text-indent:-.3in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><span style='line-height:107%;color:black'> <b>Test Module
+for SSS</b></span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+8.0pt;margin-left:49.5pt;text-indent:-.35in;line-height:107%'><b><span
+style='line-height:107%;color:black'>A.3.1<span style='font:7.0pt "Times New Roman"'>
+</span></span></b><b><span style='line-height:107%;color:black'> SSS</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='font-size:11.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='font-size:14.0pt'>Annex  B – Implementation
+Conformance Statement (ICS) Pro forma (Normative)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:4.0pt'><i><u><span style='color:black;
+background:#EDF5E7'>Guidance</span></u></i><span style='color:black;background:
+#EDF5E7'>: <i>Ideally the ICS pro forma is documented within the standard.  If
+an ICS pro forma is documented external to the standard, provide reference
+information in the standard about the ATS pro forma.</i><br>
+<br>
+<i>To test the conformance of a particular implementation of the standard, one
+needs to know which provisions of the standard were implemented.  An ICS pro
+forma provides a uniform means for the implementer to declare the mandatory,
+conditional, and optional provisions of the standard that were actually
+implemented.  This will allow the implementation to be tested for conformance
+against the relevant requirements, and against those requirements only. <br>
+<br>
+There is no universal template for designing an ICS pro forma.  This gives the
+authors of the standard the latitude to layout the pro forma in a manner that
+best portrays an overall summary for the conformance status of the IUT.  The
+pro forma shown below is a notional exemplar depicting the type of content that
+is to appear in the ICS pro forma.</i></span></p>
+
+<p class=MsoNormalCxSpMiddle><span style='color:black'>An ICS is a statement
+made by the supplier of an implementation or system claimed to conform to a
+given standard (or set of standards/specifications), asserting which
+capabilities have been conformingly implemented. An ICS pro forma provides a
+uniform means for the implementer to declare the mandatory, conditional, and
+optional provisions of the standard that were actually implemented.  <br>
+<br>
+</span></p>
+
+<p class=MsoNormalCxSpMiddle><span style='color:black'>The following ICS pro
+forma may be used by the supplier or sponsor of an implementation as a
+framework to document the standards conforming capabilities of the
+implementation of this standard.</span></p>
+
+<p class=MsoNormalCxSpLast><b><span style='font-size:11.0pt'>&nbsp;</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <thead>
+  <tr style='page-break-inside:avoid'>
+   <td width=612 colspan=6 valign=top style='width:459.0pt;border:none;
+   border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoCaption style='margin-top:3.0pt;page-break-after:avoid'>Table 1.
+   <span style='font-size:10.0pt;color:black'> Notional Implementation
+   Conformance Statement (ICS) Pro forma</span></p>
+   </td>
+  </tr>
+  <tr style='page-break-inside:avoid'>
+   <td width=612 colspan=6 valign=top style='width:459.0pt;border:solid windowtext 1.0pt;
+   border-top:none;background:#B4C6E7;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoCaption style='margin-top:3.0pt;page-break-after:avoid'><a
+   name="_Toc349746926"></a><a name="_Toc348522506"><span style='font-size:
+   12.0pt;color:black'>KML 2.2 - Implementation Conformance Statement (ICS)</span></a></p>
+   <p class=MsoCaption style='page-break-after:avoid'><a name="_Toc349746927"></a><a
+   name="_Toc348522507"><span style='font-size:8.0pt;color:black'>B=Baseline
+   KML   P=Profile Obligation    I=Implemented    P/F=Pass/Fail</span></a></p>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>M=Mandatory    O=Optional    C=Conditional</span></b></p>
+   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+   3.0pt;margin-left:0in'><b><span style='font-size:8.0pt'>Implementation Under
+   Test:                                                                                 Conformance
+   Level (1, 2 or 3): </span></b></p>
+   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+   3.0pt;margin-left:0in'><b><span style='font-size:8.0pt'>Test Point:                                                                                                              Profile
+   Identifier:  </span></b></p>
+   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+   3.0pt;margin-left:0in'><b><span style='font-size:8.0pt'>Date of Initial ICS
+   Completion:                                                                            Test
+   Sponsor: </span></b></p>
+   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+   3.0pt;margin-left:0in'><b><span style='font-size:8.0pt'>Date of Test
+   Completion:                                                                                     Test
+   Organization: </span></b></p>
+   </td>
+  </tr>
+  <tr style='page-break-inside:avoid'>
+   <td width=186 rowspan=2 style='width:139.7pt;border:solid windowtext 1.0pt;
+   border-top:none;background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>Characteristic</span></b></p>
+   </td>
+   <td width=219 rowspan=2 style='width:164.25pt;border-top:none;border-left:
+   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>Parameter</span></b></p>
+   </td>
+   <td width=207 colspan=4 valign=top style='width:155.05pt;border-top:none;
+   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>Obligation</span></b></p>
+   </td>
+  </tr>
+  <tr style='page-break-inside:avoid'>
+   <td width=59 valign=top style='width:44.15pt;border-top:none;border-left:
+   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+   3.0pt;margin-left:0in'><b><span style='font-size:8.0pt'>       B</span></b></p>
+   </td>
+   <td width=54 valign=top style='width:40.45pt;border-top:none;border-left:
+   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>P</span></b></p>
+   </td>
+   <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>I</span></b></p>
+   </td>
+   <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:
+   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   background:#D9E2F3;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+   margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt'>P/F</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='page-break-inside:avoid'>
+  <td width=186 rowspan=10 valign=top style='width:139.7pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><u><span style='font-size:9.0pt'>General Capabilities.</span></u></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>KML is an XML grammar
+  used to encode and transport representations of geographic data for display
+  in an earth browser, such as a 3D virtual globe, 2D web browser application,
+  or 2D mobile application.</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>Those parameters shown
+  on the right as ‘implemented’ provide an indication of the capabilities
+  enabled by KML instance documents produced by the implementation under test. 
+  </span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>These parameters are
+  informational only; the concept of pass/fail is not applicable for this
+  characteristic.</span></p>
+  </td>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-size:8.0pt'>KML is used
+  to annotate the Earth.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+  style='font-size:9.0pt'>&nbsp;</span></b></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to specify icons and labels to identify locations on the surface of
+  the planet.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid;height:8.65pt'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt;height:8.65pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to create different camera positions to define unique views for KML
+  features.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt;height:8.65pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt;height:8.65pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt;height:8.65pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt;height:8.65pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to define image overlays to attach to the ground or screen.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in;text-autospace:none'><span lang=EN-GB style='font-size:
+  8.0pt'>KML is used to define styles to specify KML feature appearance.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to write HTML descriptions of KML features, including hyperlinks and
+  embedded images.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to Organize KML features into hierarchies.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to locate and update retrieved KML documents from local or remote
+  network locations.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  is used to define the location and orientation of textured 3D objects.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Other (Describe):</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+  style='font-size:9.0pt'>&nbsp;</span></b></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F2F2F2;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span
+  style='font-size:9.0pt'>&nbsp;</span></b></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=612 colspan=6 valign=top style='width:459.0pt;border:solid windowtext 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=186 rowspan=3 valign=top style='width:139.7pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><u><span style='font-size:9.0pt'>Conformance Level.</span></u></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>The OGC Abstract Test
+  Suite (ATS) for KML 2.2 (OGC document 07-134r2, version 1.0.0) is a
+  compendium of abstract test cases that provide a basis for verifying the
+  structure and content of OGC KML 2.2 instance documents. Three conformance
+  levels are defined; each level builds on the preceding ones.</span></p>
+  </td>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>Conformance
+  Level 1.</span></p>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  instance documents produced by this implementation conform to absolute
+  baseline requirements.  A KML document must satisfy all assertions at this level
+  to be minimally conformant.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>X</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>Conformance
+  Level 2.</span></p>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>KML
+  instance documents produced by this implementation conform to recommended
+  requirements that should be satisfied by a KML document.  Non-conformance at
+  this level may hinder the utility, portability, or interoperability of the KML
+  instance document.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=Tabletext style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span lang=EN-GB style='font-family:"Arial",sans-serif'>Conformance
+  Level 3.<br>
+  KML instance documents produced by this implementation conform to suggested
+  constraints that are informative in nature.  KML documents at this level do
+  not use deprecated elements and are in alignment with existing
+  (non-normative) standards or conventions.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 style='width:34.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 style='width:36.4pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=612 colspan=6 valign=top style='width:459.0pt;border:solid windowtext 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=186 rowspan=10 valign=top style='width:139.7pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><u><span style='font-size:9.0pt'>Extensions to KML</span></u><span
+  style='font-size:9.0pt'>.</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>The content of KML
+  instance documents can optionally be extended to the extent permitted by the
+  KML standard.  The KML schema provides a number of extension points that may
+  be used.  </span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>When opting to extend
+  KML, the parameters to the right apply.</span></p>
+  </td>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Elements and attributes
+  that are not part of the KML standard (foreign information items) are defined
+  in a KML application profile.</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Identify profile used:</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Foreign information
+  items do not reside within the KML namespace; they are placed in another
+  namespace.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>No KML components are
+  redefined (structurally or semantically) within the KML namespace.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>The XML structure of new
+  elements and attributes is defined in a valid application profile schema that
+  imports the KML schema.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>New elements are added
+  to existing concrete KML elements by substitution only, where permitted by
+  the KML schema.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>New complex types of
+  complex content are derived directly or indirectly by extension from
+  kml:AbstractObjectType.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>New complex types of
+  complex content are derived by extension from the relevant </span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>KML abstract type whose
+  semantics it shares.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>New elements and
+  attributes are declared as optional, i.e. minOccurs=&quot;0&quot;, to support
+  the </span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>KML update mechanism. 
+  This however does not preclude asserting minimum occurrence constraints as
+  conformance rules within supplementary normative application profile
+  documentation.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>M</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Extension elements and
+  attributes are placed in a &quot;vendor-neutral&quot; namespace to support
+  any future potential integration with the KML standard, and encourage
+  interoperability in general.</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=219 valign=top style='width:164.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Extensions used are
+  based on an adopted OGC application profile that extends KML. </span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>Identify OGC application
+  profile used.</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>OGC KML Profile:</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=59 style='width:44.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>O</span></p>
+  </td>
+  <td width=54 style='width:40.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=45 valign=top style='width:34.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:.7pt 5.75pt .7pt 5.75pt'>
+  <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in;page-break-after:avoid'><span style='font-size:9.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='font-size:11.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span style='font-size:14.0pt'>Annex C - title (Informative)</span></b></p>
+
+</div>
+
+</body>
+
+</html>
