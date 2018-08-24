@@ -1,4 +1,5 @@
 == Table Of Contents 
 == 1. Standards Chapter 1 
-       This is a brief summary of chapter 1's content.
+This is a brief summary of chapter 1's content.
+
 == 2. Standards Chapter 2
