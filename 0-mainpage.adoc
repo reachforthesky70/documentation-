@@ -1,1 +1,17 @@
-**NGA STANDARDIZATION DOCUMENT**
+###NGA.aaaa.xxxx_v.v_SHORTID
+	###yyyy-mm-dd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#**NGA STANDARDIZATION DOCUMENT**
