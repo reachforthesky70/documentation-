@@ -1,6 +1,0 @@
-== Summary
-The Geospatial to the Edge Interoperability Plugfest, co-sponsored by Army Geospatial Center and the National Geospatial-Intelligence Agency (NGA/CIO&T) brought together technology implementers and data providers to advance the interoperability of geospatial products and services based on OGC profiles.
-
-
-=== Motivation
-The geospatial communities supporting defense, emergency response, and intelligence rely on geospatial data and open standards to accomplish their mission. To make sharing of data meet their specific needs, they used profiles. Profiles provide strict implementation guidance to ensure interoperability of geospatial systems in these highly specialized and demanding environments. Non-compliance to open standards profiles prohibits mission critical operations from executing effectively and efficiently.
