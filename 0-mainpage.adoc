@@ -1,5 +1,5 @@
-*NGA.aaaa.xxxx_v.v_SHORTID*
-	yyyy-mm-dd
+													       *NGA.aaaa.xxxx_v.v_SHORTID*
+															      *yyyy-mm-dd*
 
 
 
@@ -14,4 +14,4 @@
 
 
 
-**NGA STANDARDIZATION DOCUMENT**
+						**NGA STANDARDIZATION DOCUMENT**
